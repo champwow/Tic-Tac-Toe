@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Firebase -->
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <!-- Import and Link -->
+    <link rel="stylesheet" href="./src/stylePP.css">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <title>Player Profile</title>
+</head>
+
+<body id="body" onload="playerInfo()">
+    <div class="container-center">
+        <div class="container">
+            <div class="row" style="height: 15vh;">
+                <h1 id="page-header">PLAYER'S PROFILE</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col-12">
+                        <div class="profile">
+                            <img class="profileImg" src="./img/แมว9ชีวิต.jpg" alt="">
+                            <div style="display: flex; flex-wrap: wrap; flex-direction: column;">
+                                <h4 style="margin: 0;" id="player-name"></h4>
+                                <p style="opacity: 0.6; margin: 0;" id="player_email"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12" style="margin-top: 2vh; flex-wrap: wrap; flex-direction: column;">
+                        <div class="profile">
+                            <div class="container">
+                                <div class="row" id="txt-ranking" style="display: flex; justify-content: center; align-content: center; text-align: center;">
+                                    <h2 id="txt-headerRanking">Yours Ranking</h2>
+                                </div>
+                                <div class="row" id="txt-ranking" style="display: flex; justify-content: center; align-content: center; text-align: center;">
+                                    <div class="col-3" id="user_field">
+                                        
+                                    </div>
+                                    <div class="col-6" id="user_field">
+                                        
+                                    </div>
+                                    <div class="col-3" id="user_field">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12" style="margin-top: 2vh; flex-wrap: wrap; flex-direction: column;">
+                        <div class="rankingProfile" id="ranking">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                    <h1 id="txt-ranking" style="font-size: 2vw">Player Ranking</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img class="playerRankImg" src="./img/2place.png">
+                                        <h1 id="txt-ranking" style="color: silver;" class="playerName"></h1>
+                                    </div>
+                                    <div class="col-4">
+                                        <img class="playerRankImg" style="margin:0; width: 9vw;" src="./img/1place.png">
+                                        <h1 id="txt-ranking" style="color: gold;" class="playerName"></h1>
+                                    </div>
+                                    <div class="col-4">
+                                        <img class="playerRankImg" src="./img/3place.png">
+                                        <h1 id="txt-ranking" style="color: chocolate;" class="playerName"></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex d-flex justify-content-center" style="margin-top: 3vh;">
+                        <a href="playerScoreboard.html" id="btn_sub" class="btn btn-warning">VIEW PLAYER SCOREBOARD</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-12">
+                        <div class="profileData">
+                            <div class="BStat">
+                                <p id="txt-state" style="font-size: 2vw;">Battle States</p>
+                                <p id="txt-state" style="font-size: 2vw;">Total Battle <span style="font-size: 3.5vw;" id="total_m"></span> Match.</p>
+                            </div>
+                            <div style="padding-top:  2vw;">
+                                <div class="ProfileInfo1">
+                                    <p>Total Score</p>
+                                    <p id="total_score"></p>
+                                </div>
+                                <hr style="margin-top: 0px;">   
+                                <div class="ProfileInfo1">
+                                    <p>Win Rate</p>
+                                    <p id="win_rate"></p>
+                                </div>
+                                <hr style="margin-top: 0px;">
+                                <div class="ProfileInfo1">
+                                    <p>Correct Rate</p>
+                                    <p id="crr_rate"></p>
+                                </div>
+                                <hr style="margin-top: 0px;">
+                                <div class="ProfileInfo1">
+                                    <p>Number of Wins</p>
+                                    <p id="win_m"></p>
+                                </div>
+                                <hr style="margin-top: 0px;">
+                                <div class="ProfileInfo1">
+                                    <p>Number of Questions</p>
+                                    <p id="num_q"></p>
+                                </div>
+                            </div>
+                            <hr style="margin-top: 0px;">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group d-flex d-flex justify-content-center" style="margin-top: 3vh;">
+                            <a id="btn_startgame" class="btn btn-warning" onclick="toMainBoard()">START GAME</a>
+                        </div>
+                        <div class="form-group d-flex d-flex justify-content-center" style="margin-top: 3vh;">
+                            <a id="btn_logout_2" class="btn btn-warning"  onclick="logout()">LOGOUT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a id="btn_logout" class="btn" onclick="logout()" style="display: inline-block; right: 0; bottom: 0;"><i class="bi bi-box-arrow-in-right"></i>Logout</a>
+    </div>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCltf0lrmGuCwsOL4ef5Q_8ZAs5zb8X83s",
+            authDomain: "web-design-project1.firebaseapp.com",
+            databaseURL: "https://web-design-project1-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "web-design-project1",
+            storageBucket: "web-design-project1.appspot.com",
+            messagingSenderId: "360781734737",
+            appId: "1:360781734737:web:925b12e3aee2ccb6bfa970",
+            measurementId: "G-VZNVFG8K3L"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./src/auth.js"></script>
+</body>
+
+</html>

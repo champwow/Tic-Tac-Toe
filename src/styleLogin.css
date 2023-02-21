@@ -1,0 +1,46 @@
+#body {
+    background-color: #265CE0;
+    background-image: url(./img/main_bg.png);
+    background-size: cover;
+}
+
+#input-email-login,
+#input-password-login {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #FFD86A;
+    border-radius: 20px;
+    background-color: #265CE0;
+}
+
+input,
+select,
+textarea {
+    color: #FFD86A !important;
+}
+
+::placeholder {
+    color: #FFD86A !important;
+    opacity: 1;
+}
+
+#remember {
+    color: #FFD86A !important;
+    font-size: 1.1vw;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5) !important;
+}
+
+a {
+    color: #FFD86A !important;
+    text-decoration: none !important;
+}
+
+.form-containner{
+    display: block;
+}
+

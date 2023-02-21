@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap");
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Spartan', sans-serif !important;
+}
+
+a#btn_home,
+a#btn_login,
+a#btn_regs,
+a#btn_about,
+a#btn_logout {
+    color: aliceblue !important;
+    margin: 30px 30px 30px 30px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1vw;
+}
+
+a#btn_home.active,
+a#btn_login.active,
+a#btn_regs.active,
+a#btn_about.active {
+    border-style: solid;
+    border-color: #FFD86A;
+    color: #FFD86A !important;
+    border-radius: 25px;
+    border-width: 3px;
+    padding: 5px 15px 5px 15px;
+}
+
+a#btn_logout{
+    margin: 0;
+    position: absolute;
+}
+
+a#btn_logout:hover{
+    color: #FFD86A !important;
+}
+
+#body {
+    background-color: #265CE0;
+    background-image: url(./img/main_bg.png);
+    background-size: cover;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#nav_logo {
+    margin: 0 10px 0 10px;
+    width: 50px;
+    height: auto;
+}
+
+#game_logo {
+    margin-bottom: 3vh;
+    width: 17vw;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    top: 50vh;
+}
+
+#btn_main {
+    width: 20vw;
+    height: 12vh;
+    padding: 20px;
+    font-size: 40px;
+    background-color: #FFD86A;
+    border-radius: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+    color: #E16A45;
+    box-shadow: -10px 10px;
+}
+
+#btn_main:hover {
+    background-color: #E16A45;
+    box-shadow: -3px 3px;
+    color: #FFD86A;
+}
+
+.profile {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 15vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.rankingProfile{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 30vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.profileData {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 47vh;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.8vw;
+    /* justify-content: center; */
+    padding: 1vw;
+}
+
+.BStat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1vw;
+}
+
+.profileImg {
+    height: 100%;
+    width: auto;
+    shape-outside: circle(50%);
+    clip-path: circle(28%);
+}
+
+.ProfileInfo1 {
+    height: 2vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topText{
+    font-size: 2vw;
+}
+
+@media screen and (max-width: 600px) {
+    .table{
+        width: 80vw !important;
+    }
+    th, td {
+        font-size: 3vw !important;
+    }
+    .profileData{
+        padding: 5vw;
+    }
+    #player_email{
+        font-size: 3vw;
+    }
+    #btn_absolute.ranking-score{
+        left: 35vw !important;
+    }
+    .topText{
+        font-size: 5vw;
+    }
+}

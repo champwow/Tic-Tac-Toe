@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap");
+#body {
+    background-color: #265CE0;
+    background-image: url(./img/main_bg.png);
+    background-size: cover;
+}
+
+#input-user-signup,
+#input-password-signup,
+#input-email-signup {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #FFD86A;
+    border-radius: 20px;
+    background-color: #265CE0;
+}
+
+input,
+select,
+textarea {
+    color: #FFD86A !important;
+}
+
+::placeholder {
+    color: #FFD86A !important;
+    opacity: 1;
+}
+
+.form-containner{
+    display: block;
+}
+
+#page-header{
+    font-family: 'Spartan', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .form-group{
+        width: 100% !important;
+    }
+    #btn_absolute{
+        margin-left: 35vw;
+        left: 0 !important;
+    }
+}

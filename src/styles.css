@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+:root {
+    font-family: 'Spartan', sans-serif;
+}
+
+a#btn_home,
+a#btn_login,
+a#btn_regs,
+a#btn_about,
+a#btn_logout {
+    color: aliceblue !important;
+    margin: 30px 30px 30px 30px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1vw;
+}
+
+a#btn_home.active,
+a#btn_login.active,
+a#btn_regs.active,
+a#btn_about.active {
+    border-style: solid;
+    border-color: #FFD86A;
+    color: #FFD86A !important;
+    border-radius: 25px;
+    border-width: 3px;
+    padding: 5px 15px 5px 15px;
+}
+
+#body {
+    background-color: #265CE0;
+    background-image: url(/img/main_bg.png);
+    background-size: cover;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#nav_logo {
+    margin: 0 10px 0 10px;
+    width: 50px;
+    height: auto;
+}
+
+#game_logo {
+    margin-bottom: 3vh;
+    width: 17vw;
+    height: auto;
+}
+
+.container {
+    top: 50vh;
+}
+
+#btn_main {
+    width: 20vw;
+    height: 12vh;
+    padding: 20px;
+    font-size: 40px;
+    background-color: #FFD86A;
+    border-radius: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+    color: #E16A45;
+    box-shadow: -10px 10px;
+}
+
+#btn_main:hover,
+#btn_sub:hover,
+#btn_absolute:hover,
+#btn_absolute1:hover,
+#btn_startgame:hover {
+    background-color: #E16A45;
+    box-shadow: -3px 3px;
+    color: #FFD86A !important;
+}
+
+#btn_sub {
+    padding: 10px 15px 10px 15px;
+    font-size: 1vw;
+    background-color: #FFD86A;
+    border-radius: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    color: #E16A45 !important;
+    box-shadow: -5px 5px;
+}
+
+#btn_startgame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px 10px 15px;
+    width: 100%;
+    height: 12vh;
+    font-size: 2vw;
+    background-color: #FFD86A;
+    border-radius: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    color: #E16A45 !important;
+    box-shadow: -5px 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#btn_absolute {
+    padding: 10px 15px 10px 15px;
+    font-size: 1vw;
+    background-color: #FFD86A;
+    border-radius: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    color: #E16A45 !important;
+    box-shadow: -5px 5px;
+    position: absolute;
+}
+
+#btn_absolute1 {
+    padding: 10px 20px 10px 20px;
+    font-size: 1vw;
+    background-color: #FFD86A;
+    border-radius: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    color: #E16A45 !important;
+    box-shadow: -5px 5px;
+    position: absolute;
+}
+
+#ranking {
+    display: flex;
+    text-align: center;
+    font-family: 'Bangers', cursive !important;
+}
+
+#txt-ranking {
+    font-size: 1.2vw;
+    font-family: 'Spartan', sans-serif !important;
+}
+
+.playerRankImg {
+    width: 8vw;
+    margin-top: 10px;
+}
+
+td,
+tr {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Spartan', sans-serif;
+}
+
+th {
+    font-size: 1.2vw;
+}
+
+td {
+    font-size: 1vw;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#textWarning {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+}
+
+#page-header{
+    display: flex;
+    justify-content: center; 
+    color: #FFD86A; 
+    font-size: 3.5vw; 
+    align-self: center;
+}
+
+#btn_logout_2{
+    display: none;
+}
+
+.footer-main{
+    color: rgba(197, 197, 197, 0.5);
+    position: absolute;
+    bottom: 50px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+    #game_logo{
+        width: 50vw;
+    }
+    #btn_main{
+        width: 50vw;
+        height: 8vh;
+        font-size: 5vw;
+        box-shadow: -5px 5px;
+    }
+    #btn_sub{
+        width: 50vw;
+        height: 5vh;
+        font-size: 3vw;
+        box-shadow: -5px 5px;
+    }
+    #btn_absolute{
+        width: 30vw;
+        height: 4.5vh;
+        box-shadow: -5px 5px;
+        font-size: 2.5vw;
+    }
+    .logotext{
+        font-size: 5vw;
+    }
+    .logotext li{
+        font-size: 4.5vw;
+    }
+    #img-text-hp{
+        margin-left: 0!important;
+    }
+    #page-header{
+        font-size: 8vw; 
+        margin: 0;
+    }
+    #txt-ranking{
+        font-size: 5vw !important;
+    }
+    #txt-ranking.playerName{
+        font-size: 3.5vw !important;
+    }
+    #txt-headerRanking{
+        font-size: 5vw;
+    }
+    .playerRankImg{
+        width: 20vw !important;
+    }
+    #btn_sub{
+        margin-bottom: 3vh;
+        width: 60vw;
+    }
+    .BStat{
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    #txt-state{
+        font-size: 5.5vw !important;
+    }
+    .ProfileInfo1{
+        font-size: 3vw;
+    }
+    #total_m{
+        font-size: 7vw !important;
+    }
+    #btn_startgame{
+        font-size: 10vw;
+    }
+    #btn_logout{
+        display: none !important;
+    }
+    #btn_logout_2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px 10px 15px;
+        width: 50vw;
+        height: 5vh;
+        font-size: 3vw;
+        background-color: #FFD86A;
+        border-radius: 10px;
+        font-family: 'Spartan', sans-serif;
+        font-weight: 600;
+        color: #E16A45 !important;
+        box-shadow: -5px 5px;
+        margin-bottom: 30px;
+    }
+    .ranking{
+        margin-bottom: 30px !important;
+    }
+    #btn_absolute.howtoplay{
+        margin-left: 35vw !important;
+    }
+    #body {
+        background-image: url(/img/main_bg_mob.png);
+    }
+    .footer-main{
+        bottom: 10px;
+        font-family: 'Spartan', sans-serif;
+        font-size: 3vw;
+    }
+}

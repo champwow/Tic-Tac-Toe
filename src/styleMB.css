@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap");
+:root {
+    font-family: 'Spartan', sans-serif;
+}
+
+* {
+    font-family: 'Spartan', sans-serif;
+}
+
+a#btn_home,
+a#btn_login,
+a#btn_regs,
+a#btn_about {
+    color: aliceblue !important;
+    margin: 30px 30px 30px 30px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1vw;
+}
+
+a#btn_home.active,
+a#btn_login.active,
+a#btn_regs.active,
+a#btn_about.active {
+    border-style: solid;
+    border-color: #FFD86A;
+    color: #FFD86A !important;
+    border-radius: 25px;
+    border-width: 3px;
+    padding: 5px 15px 5px 15px;
+}
+
+#body {
+    background-color: #265CE0;
+    background-image: url(./img/main_bg.png);
+    background-size: cover;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#nav_logo {
+    margin: 0 10px 0 10px;
+    width: 50px;
+    height: auto;
+}
+
+#game_logo {
+    margin-bottom: 3vh;
+    width: 17vw;
+    height: auto;
+}
+
+.container {
+    top: 50vh;
+}
+
+#btn_main {
+    width: 20vw;
+    height: 12vh;
+    padding: 20px;
+    font-size: 40px;
+    background-color: #FFD86A;
+    border-radius: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+    color: #E16A45;
+    box-shadow: -10px 10px;
+}
+
+#btn_main:hover {
+    background-color: #E16A45;
+    box-shadow: -3px 3px;
+    color: #FFD86A;
+}
+
+.bigtable {
+    position: relative;
+}
+
+.bgtable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Mainboard #numboard {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.numboard1 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    /* position: absolute; */
+}
+
+.numboard2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    top: 16vw;
+    left: 26vw;
+}
+
+.numboard3 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    top: 28vw;
+    left: 26vw;
+}
+
+.numboard4 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    top: 4vw;
+    left: 38.5vw;
+}
+
+.numboard5 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    top: 16vw;
+    left: 38.5vw;
+}
+
+.numboard6 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    top: 28vw;
+    left: 38.5vw;
+}
+
+.numboard7 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    top: 4vw;
+    left: 51vw;
+}
+
+.numboard8 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    top: 16vw;
+    left: 51vw;
+}
+
+.numboard9 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    top: 28vw;
+    left: 51vw;
+}
+
+td {
+    /* background-color: #FFD86A; */
+    border: 2px solid white !important;
+    height: 10vw;
+    width: 10vw;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 70px;
+    padding: 50px;
+}
+
+@media only screen and (max-width: 599px) {
+    #Mainboard td {
+        padding: 0;
+        height: 30vw;
+        width: 30vw;
+        align-items: center;
+    }
+    .numboard9 {
+        width: 12vw;
+        height: 12vw;
+    }
+    .numboard8 {
+        width: 12vw;
+        height: 12vw;
+    }
+    .numboard7 {
+        width: 12vw;
+        height: 12vw;
+    }
+    .numboard6 {
+        width: 12vw;
+        height: 12vw;
+    }
+    .numboard5 {
+        width: 12vw;
+        height: 12vw;
+    }
+    .numboard4 {
+        width: 12vw;
+        height: 12vw;
+    }
+    .numboard3 {
+        width: 12vw;
+        height: 12vw;
+    }
+    .numboard2 {
+        width: 12vw;
+        height: 12vw;
+    }
+    .numboard1 {
+        width: 12vw;
+        height: 12vw;
+    }
+    #textmainboad {
+        font-size: 8vw;
+    }
+    #textchoose {
+        font-size: 3vw;
+    }
+    #numboard a{
+        font-size: 4vw !important;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #Mainboard td {
+        padding: 0;
+        height: 11vw;
+        width: 11vw;
+        align-items: center;
+    }
+    .numboard9 {
+        width: 5vw;
+        height: 5vw;
+    }
+    .numboard8 {
+        width: 5vw;
+        height: 5vw;
+    }
+    .numboard7 {
+        width: 5vw;
+        height: 5vw;
+    }
+    .numboard6 {
+        width: 5vw;
+        height: 5vw;
+    }
+    .numboard5 {
+        width: 5vw;
+        height: 5vw;
+    }
+    .numboard4 {
+        width: 5vw;
+        height: 5vw;
+    }
+    .numboard3 {
+        width: 5vw;
+        height: 5vw;
+    }
+    .numboard2 {
+        width: 5vw;
+        height: 5vw;
+    }
+    .numboard1 {
+        width: 5vw;
+        height: 5vw;
+    }
+    #textmainboad {
+        font-size: 3vw;
+    }
+    #textchoose {
+        font-size: 1.2vw;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    /* position: absolute; */
+}
+
+table tr:first-child td {
+    border-top: 0 !important;
+}
+
+table tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+table tr td:first-child {
+    border-left: 0 !important;
+}
+
+table tr td:last-child {
+    border-right: 0 !important;
+}
+
+.modal-footer {
+    background-color: #FFD04C;
+    font-size: 20px;
+}
+
+.modal-header {
+    background-color: #FFD04C;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.modal#resetGameModal {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 300;
+}
+
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+
+.modal .text {
+    margin: 20px;
+    font-size: 1.3vw;
+}
+
+#textWarning {
+    margin-bottom: 20px;
+}
+
+#result_Game {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 300;
+    width: 20%;
+    margin: 10px;
+}
+
+#resultText {
+    font-size: 3vw;
+}
+
+@media screen and (max-width: 600px) {
+    .pin{
+        width: 20vw !important;
+    }
+    #result_Game{
+        width: 40%;
+    }
+    #textWarning{
+        font-size: 4.5vw;
+    }
+}
+

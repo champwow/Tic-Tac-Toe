@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <!-- Import and Link -->
+    <link rel="stylesheet" href="./src/styleMB.css">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/ingameScript.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap" rel="stylesheet">
+    <script src="ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&family=Prompt:wght@200;400&display=swap" rel="stylesheet">
+    <title>Mode Space</title>
+</head>
+
+<body id="body">
+    <div class="container-center">
+        <a id="btn_absolute1" class="btn btn-warning" style="left: 20px; top: 10px;" onclick="warningModal()">BACK</a>
+        <div class="container" style="height: 100vh;">
+            <div class="row">
+                <h1 style="display: flex; justify-content: center; color: #FFD86A; font-size: 3vw; align-self: flex-end;" id="nameBoard"></h1>
+                <p style="display: flex; justify-content: center; color: #FFD86A; font-size: 1.2vw;"><span id="time"></span></p>
+            </div>
+            <div class="row">
+                <div class="bigtable">
+                    <div class="bgtable">
+                        <table id="Subboard">
+                            <tr>
+                                <td class="cell" id="00" onclick="butttonXO(this)"></td>
+                                <td class="cell" id="01" onclick="butttonXO(this)"></td>
+                                <td class="cell" id="02" onclick="butttonXO(this)"></td>
+                            </tr>
+                            <tr>
+                                <td class="cell" id="10" onclick="butttonXO(this)"></td>
+                                <td class="cell" id="11" onclick="butttonXO(this)"></td>
+                                <td class="cell" id="12" onclick="butttonXO(this)"></td>
+                            </tr>
+                            <tr>
+                                <td class="cell" id="20" onclick="butttonXO(this)"> </td>
+                                <td class="cell" id="21" onclick="butttonXO(this)"></td>
+                                <td class="cell" id="22" onclick="butttonXO(this)"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="consol">
+                <img src="" class="doodle" id="doodle" alt="yellow" style="display: flex; justify-content: center; cursor: pointer;" onclick="pickUp(this)">
+                <img src="" class="doodle" id="doodle" alt="yellow" style="display: flex; justify-content: center; cursor: pointer;" onclick="pickUp(this)">
+                <img src="" class="doodle" id="doodle" alt="yellow" style="display: flex; justify-content: center; cursor: pointer;" onclick="pickUp(this)">
+                <img src="" class="doodle" id="doodle" alt="yellow" style="display: flex; justify-content: center; cursor: pointer;" onclick="pickUp(this)">
+                <img src="" class="doodle" id="doodle" alt="yellow" style="display: flex; justify-content: center; cursor: pointer;" onclick="pickUp(this)">
+                <img src="" class="doodle" id="doodle" alt="red" style="display: flex; justify-content: center; cursor: pointer;" onclick="pickUp(this)">
+            </div>
+            <a id="btn_absolute" class="btn btn-warning" style="left: 50px; bottom: 50px;" onclick="warningModal()">BACK</a>
+        </div>
+
+    </div>
+
+    <div class="turn1">
+        <p style="display: flex; justify-content: center; color: #FFD86A; font-size: 2vw;" id="NameHUMEN"></p>
+        <img src="" alt="" style="display: flex; justify-content: center; width: 13vw; margin-left: 8%;" id="HuImage">
+        <p style="display: flex; justify-content: center; color: #FFD86A; font-size: 1.5vw;" id="Hmstat">Your Turn...</p>
+    </div>
+    <div class="turn2">
+        <p style="display: flex; justify-content: center; color: #FFD86A; font-size: 2vw;" id="NameAI"></p>
+        <img src="" alt="" style="display: flex; justify-content: center; width: 13vw; margin-left: 8%;" id="AiImage">
+        <p style="display: flex; justify-content: center; color: #FFD86A; font-size: 1.5vw;" id="Aistat">Waiting...</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="modal-title">
+                        <h5 style="margin: 0;">Normal Questions</h5>
+                    </div>
+                </div>
+                <div class="modal-body text-center question">
+                    <div class="" id="test"></div>
+                    <div class=" container-fluid answer align-content-center">
+                        <div><button type="button" class="btn btn-warning" id="answerA" onclick="clickChoice(this);"></button></div>
+                        <div><button type="button" class="btn btn-warning" id="answerB" onclick="clickChoice(this);"></button></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Endgame Modal-->
+    <div class="modal fade" id="gameResult" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="modal-title">
+                        <h5 style="margin: 0;">Game Result</h5>
+                    </div>
+                </div>
+                <div class="modal-body text-center result">
+                    <div class="" id="resultText"></div>
+                    <div class="" id="textQuote"></div>
+                    <div class="container-fluid answer align-content-center">
+                        <div><button type="button" class="btn btn-success" id="result_Game" onclick="callBackData()">ยอมรับ</button></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exit Warning Modal -->
+    <div class="modal fade" id="exitWarning" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="modal-title">
+                        <h5 style="margin: 0;">Warning</h5>
+                    </div>
+                </div>
+                <div class="modal-body text-center result">
+                    <div id="textWarning">หากคุณต้องการออกจากเกมในตอนที่เกมยังไม่จบ ความคืบหน้าทั้งหมดของเกมในบอร์ดนี้จะถูกลบ <br>คุณต้องการออกหรือไม่?</div>
+                    <div class="container-fluid answer align-content-center">
+                        <div>
+                            <button type="button" class="btn btn-success" id="result_Game" onclick="callBackData()">ต้องการ</button>
+                            <button type="button" class="btn btn-danger" id="result_Game" onclick="hideWarningModal()">ไม่ต้องการ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hard Question Modal -->
+    <div class="modal fade" id="Hardquestion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="modal-title">
+                        <h5 style="margin: 0;">Hard Questions</h5>
+                    </div>
+                </div>
+                <div class="modal-body text-center question">
+                    <div class="" id="questionHard"></div>
+                    <div class=" container-fluid answer align-content-center">
+                        <div><button type="button" class="btn btn-warning" id="answerHardA" onclick="clickHardChoice(this);"></button></div>
+                        <div><button type="button" class="btn btn-warning" id="answerHardB" onclick="clickHardChoice(this);"></button></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyCltf0lrmGuCwsOL4ef5Q_8ZAs5zb8X83s",
+        authDomain: "web-design-project1.firebaseapp.com",
+        databaseURL: "https://web-design-project1-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "web-design-project1",
+        storageBucket: "web-design-project1.appspot.com",
+        messagingSenderId: "360781734737",
+        appId: "1:360781734737:web:925b12e3aee2ccb6bfa970",
+        measurementId: "G-VZNVFG8K3L"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./src/scripts.js"></script>
+<script src="./src/game.js"></script>
+
+</html>
